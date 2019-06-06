@@ -4009,7 +4009,7 @@ vm_pressure_response(void)
 	if (new_level != -1) {
 		memorystatus_vm_pressure_level = (vm_pressure_level_t) new_level;
 
-		if (new_level != old_level) {
+		if (new_level != (int)old_level) {
 			VM_DEBUG_CONSTANT_EVENT(vm_pressure_level_change, VM_PRESSURE_LEVEL_CHANGE, DBG_FUNC_NONE,
 					new_level, old_level, 0, 0);
 		}
